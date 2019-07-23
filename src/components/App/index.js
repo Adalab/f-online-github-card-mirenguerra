@@ -43,7 +43,12 @@ class App extends React.Component {
             : 0
         );
       this.setState({ adalabersList: [...adalabersData] });
+      this.saveAdalabersLS(adalabersData);
     });
+  }
+
+  saveAdalabersLS(users) {
+    localStorage.setItem("adalabersList", JSON.stringify(users));
   }
 
   handleSelect(event) {
