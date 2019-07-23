@@ -3,6 +3,7 @@ import "./styles.scss";
 import InputFilter from "../InputFilter";
 import getDataList from "../../services/getAdalabersDataList";
 import getAdalaberData from "../../services/getAdalaberData";
+
 const adalabersData = [];
 
 class App extends React.Component {
@@ -12,6 +13,7 @@ class App extends React.Component {
       adalabersList: [],
       selectedAdalaber: "",
     };
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
   componentDidMount() {
@@ -43,10 +45,18 @@ class App extends React.Component {
     });
   }
 
+  handleSelect(event) {
+    this.setState({ selectedAdalaber: event.target.value });
+  }
+
   render() {
+    const { adalabersList } = this.state;
     return (
       <div className="App">
-        <InputFilter />
+        <InputFilter
+          adalabersList={adalabersList}
+          handleSelect={this.handleSelect}
+        />
       </div>
     );
   }
