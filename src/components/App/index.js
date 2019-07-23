@@ -58,7 +58,7 @@ class App extends React.Component {
   render() {
     const { adalabersList, selectedAdalaber } = this.state;
     return (
-      <div className="App">
+      <section className="App">
         <InputFilter
           adalabersList={adalabersList}
           handleSelect={this.handleSelect}
@@ -67,7 +67,7 @@ class App extends React.Component {
           adalabersList={adalabersList}
           selectedAdalaber={selectedAdalaber}
         />
-      </div>
+      </section>
     );
   }
 }
