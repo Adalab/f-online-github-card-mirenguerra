@@ -1,13 +1,18 @@
 import React from "react";
-import "./styles.sass";
+import "./styles.scss";
+import InputFilter from "../InputFilter";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state={}
+    this.state = {};
   }
   render() {
-    return <div className="App" />;
+    return (
+      <div className="App">
+        <InputFilter />
+      </div>
+    );
   }
 }
 
