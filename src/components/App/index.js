@@ -3,6 +3,7 @@ import "./styles.scss";
 import InputFilter from "../InputFilter";
 import getDataList from "../../services/getAdalabersDataList";
 import getAdalaberData from "../../services/getAdalaberData";
+import UserCard from "../UserCard";
 
 const adalabersData = [];
 
@@ -50,12 +51,16 @@ class App extends React.Component {
   }
 
   render() {
-    const { adalabersList } = this.state;
+    const { adalabersList, selectedAdalaber } = this.state;
     return (
       <div className="App">
         <InputFilter
           adalabersList={adalabersList}
           handleSelect={this.handleSelect}
+        />
+        <UserCard
+          adalabersList={adalabersList}
+          selectedAdalaber={selectedAdalaber}
         />
       </div>
     );

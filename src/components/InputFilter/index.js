@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.scss';
 
 const InputFilter = props =>{
+    const {adalabersList, handleSelect} = props;
     return(
         <form className="InputFilter">
             <label className="InputFilter__label">
