@@ -3,7 +3,7 @@ import "./styles.scss";
 
 const UserCard = props => {
   const { adalabersList, selectedAdalaber } = props;
-  if (selectedAdalaber!=="") {
+  if (selectedAdalaber !== "") {
     const adalaber = adalabersList.filter(
       adalaber => adalaber.login === selectedAdalaber
     );
@@ -13,7 +13,7 @@ const UserCard = props => {
       <section className="UserCard">
         <div
           className="UserCard__img"
-          src={currentAdalaber.avatar_url}
+          style={{ backgroundImage: `url(${currentAdalaber.avatar_url})` }}
           alt={`Foto de ${currentAdalaber.login}`}
         />
         <div className="UserCard__info">
@@ -28,7 +28,7 @@ const UserCard = props => {
           <h1 className="UserCard__name">{currentAdalaber.name}</h1>
           {currentAdalaber.location ? (
             <h2 className="UserCard__location">
-              <i className="fas fa-map-marker-alt" />
+              <i className="fas fa-map-marker-alt UserCard__location-ico" />
               {currentAdalaber.location}
             </h2>
           ) : (
@@ -57,7 +57,7 @@ const UserCard = props => {
         </div>
       </section>
     );
-  }else{
+  } else {
     return null;
   }
 };
