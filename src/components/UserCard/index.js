@@ -3,7 +3,7 @@ import "./styles.scss";
 
 const UserCard = props => {
   const { adalabersList, selectedAdalaber } = props;
-  if (selectedAdalaber!==null) {
+  if (selectedAdalaber!=="") {
     const adalaber = adalabersList.filter(
       adalaber => adalaber.login === selectedAdalaber
     );
@@ -57,6 +57,8 @@ const UserCard = props => {
         </div>
       </section>
     );
+  }else{
+    return null;
   }
 };
 

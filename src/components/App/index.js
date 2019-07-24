@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      adalabersList: [],
+      adalabersList: JSON.parse(localStorage.getItem("adalabersList")) || [],
       selectedAdalaber: "",
     };
     this.handleSelect = this.handleSelect.bind(this);
@@ -72,11 +72,11 @@ class App extends React.Component {
           adalabersList={adalabersList}
           handleSelect={this.handleSelect}
         />
-        <i class="fab fa-github-alt App__Github"></i>
-        {/* <UserCard
+        <i className="fab fa-github-alt App__Github"></i>
+        <UserCard
           adalabersList={adalabersList}
           selectedAdalaber={selectedAdalaber}
-        /> */}
+        />
       </section>
     );
   }
