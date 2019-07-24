@@ -35,13 +35,13 @@ class App extends React.Component {
     getAdalaberData(url).then(data => {
       adalabersData
         .push(data)
-        .sort((a, b) =>
-          a.login.toLowerCase() > b.login.toLowerCase()
-            ? 1
-            : b.login.toLowerCase() > a.login.toLowerCase()
-            ? -1
-            : 0
-        );
+        // .sort((a, b) =>
+        //   a.login.toLowerCase() > b.login.toLowerCase()
+        //     ? 1
+        //     : b.login.toLowerCase() > a.login.toLowerCase()
+        //     ? -1
+        //     : 0
+        // );
       this.setState({ adalabersList: [...adalabersData] });
       this.saveAdalabersLS(adalabersData);
     });
