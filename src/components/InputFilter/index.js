@@ -10,8 +10,9 @@ const InputFilter = props => {
           className="InputFilter__input"
           type="text"
           onChange={handleSelect}
+          defaultValue={"DEFAULT"}
         >
-          <option selected disabled>
+          <option value="DEFAULT" disabled>
             Selecciona una usuaria
           </option>
           {adalabersList.map(adalaber => {

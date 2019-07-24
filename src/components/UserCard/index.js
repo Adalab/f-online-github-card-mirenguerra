@@ -3,7 +3,7 @@ import "./styles.scss";
 
 const UserCard = props => {
   const { adalabersList, selectedAdalaber } = props;
-  if (selectedAdalaber) {
+  if (selectedAdalaber!==null) {
     const adalaber = adalabersList.filter(
       adalaber => adalaber.login === selectedAdalaber
     );

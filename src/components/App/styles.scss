@@ -1,3 +1,12 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.App__Github {
+  font-size: 200px;
+  color: #807a7a;
 }

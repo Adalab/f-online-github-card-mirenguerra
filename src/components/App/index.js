@@ -24,27 +24,36 @@ class App extends React.Component {
   }
 
   fetchAdalabersList() {
-    getDataList().then(users => {
-      users.map(user => {
-        return this.fetchAdalaberData(user.url);
+    getDataList()
+      .then(users => {
+        if (users) {
+          users.map(user => {
+            return this.fetchAdalaberData(user.url);
+          });
+        } else {
+          console.log("Error");
+        }
+      })
+      .catch(function() {
+        alert("No se ha podido conectar. Inténtalo de nuevo");
       });
-    });
   }
 
   fetchAdalaberData(url) {
-    getAdalaberData(url).then(data => {
-      adalabersData
-        .push(data)
-        // .sort((a, b) =>
-        //   a.login.toLowerCase() > b.login.toLowerCase()
-        //     ? 1
-        //     : b.login.toLowerCase() > a.login.toLowerCase()
-        //     ? -1
-        //     : 0
-        // );
-      this.setState({ adalabersList: [...adalabersData] });
-      this.saveAdalabersLS(adalabersData);
-    });
+    getAdalaberData(url)
+      .then(data => {
+        if (data) {
+          adalabersData.push(data);
+
+          this.setState({ adalabersList: [...adalabersData] });
+          this.saveAdalabersLS(adalabersData);
+        } else {
+          console.log("Error");
+        }
+      })
+      .catch(function() {
+        alert("No se ha podido conectar. Inténtalo de nuevo");
+      });
   }
 
   saveAdalabersLS(users) {
@@ -63,10 +72,11 @@ class App extends React.Component {
           adalabersList={adalabersList}
           handleSelect={this.handleSelect}
         />
-        <UserCard
+        <i class="fab fa-github-alt App__Github"></i>
+        {/* <UserCard
           adalabersList={adalabersList}
           selectedAdalaber={selectedAdalaber}
-        />
+        /> */}
       </section>
     );
   }
