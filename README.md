@@ -1,4 +1,4 @@
-# Live Calendar
+# Adalab organization GitHub searcher
 
 _A simple app in which using the GitHub API you get a list of members of the organization Adalab and through a "input select" you can filter them by name. When you select one of them, its data is shown in a small card._
 
