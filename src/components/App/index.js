@@ -4,6 +4,7 @@ import InputFilter from "../InputFilter";
 import getDataList from "../../services/getAdalabersDataList";
 import getAdalaberData from "../../services/getAdalaberData";
 import UserCard from "../UserCard";
+import logoAdalab from "../../images/logo-adalab.png";
 
 const adalabersData = [];
 
@@ -68,14 +69,23 @@ class App extends React.Component {
     const { adalabersList, selectedAdalaber } = this.state;
     return (
       <section className="App">
-        <InputFilter
-          adalabersList={adalabersList}
-          handleSelect={this.handleSelect}
-        />
-        <UserCard
-          adalabersList={adalabersList}
-          selectedAdalaber={selectedAdalaber}
-        />
+        <main>
+          <InputFilter
+            adalabersList={adalabersList}
+            handleSelect={this.handleSelect}
+          />
+          <UserCard
+            adalabersList={adalabersList}
+            selectedAdalaber={selectedAdalaber}
+          />
+        </main>
+        <footer>
+          <img
+            className="App__footer-logo"
+            src={logoAdalab}
+            alt="Logo de Adalab"
+          />
+        </footer>
       </section>
     );
   }
