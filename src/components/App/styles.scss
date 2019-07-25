@@ -1,3 +1,18 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: url(../../images/github-ico.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.App__footer-logo {
+  height: 35px;
+  width: auto;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
 }
