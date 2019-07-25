@@ -72,7 +72,6 @@ class App extends React.Component {
           adalabersList={adalabersList}
           handleSelect={this.handleSelect}
         />
-        <i className="fab fa-github-alt App__Github"></i>
         <UserCard
           adalabersList={adalabersList}
           selectedAdalaber={selectedAdalaber}

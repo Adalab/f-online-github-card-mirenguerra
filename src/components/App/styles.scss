@@ -4,9 +4,8 @@
   align-items: center;
   height: 100vh;
   width: 100%;
+  background: url(../../images/github-ico.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
 }
 
-.App__Github {
-  font-size: 200px;
-  color: #c9c8c7;
-}

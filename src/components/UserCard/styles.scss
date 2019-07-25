@@ -1,6 +1,6 @@
 .UserCard {
-  margin-top: 50px;
-  width: 300px;
+  margin-top: 20px;
+  width: 280px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -12,8 +12,8 @@
 
 .UserCard__img {
   background-color: lightgray;
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background-position: center;
@@ -22,7 +22,7 @@
 
 .UserCard__info {
   padding: 20px 25px;
-  width: 300px;
+  width: 280px;
   background-color: #f4f5f6;
 }
 
